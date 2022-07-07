@@ -67,6 +67,10 @@ contract RuaNFT is Initializable, OwnableUpgradeable, ERC721Upgradeable {
         }
     }
 
+    function setPrice(uint256 _price) public onlyOwner {
+        price = _price;
+    }
+
     function setPaymentMethod(address _paymentMethod) public onlyOwner {
         paymentMethod = _paymentMethod;
     }
